@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Ancient Reborn World"
+description = "An immersive website introducing Ancient Reborn World, a fantasy universe where ancient civilizations, myth, and adventure return in a vivid new form."
+version = "1.0.0"
+id = "artifacts/ancient-reborn-world"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18436
+
+[services.development]
+run = "pnpm --filter @workspace/ancient-reborn-world run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ancient-reborn-world", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ancient-reborn-world/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18436"
+BASE_PATH = "/"
