@@ -4,6 +4,7 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
+import BongoKikoPage from '@/pages/bongo-kiko';
 import { ArrowDown, ArrowRight, ArrowUpRight, Bell, BookOpen, Compass, Menu, MoveUpRight, Waves, X } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -308,6 +309,11 @@ function Router() {
     <RoutedErrorBoundary>
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/bongo-kiko"><BongoKikoPage page="intro" /></Route>
+        <Route path="/bongo-kiko/characters"><BongoKikoPage page="characters" /></Route>
+        <Route path="/bongo-kiko/characters/bongo"><BongoKikoPage page="bongo" /></Route>
+        <Route path="/bongo-kiko/characters/kiko"><BongoKikoPage page="kiko" /></Route>
+        <Route path="/bongo-kiko/adventures"><BongoKikoPage page="adventures" /></Route>
         <Route component={NotFound} />
       </Switch>
     </RoutedErrorBoundary>
