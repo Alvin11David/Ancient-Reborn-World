@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,500,30,1;9..144,600,30,1;9..144,700,30,1&family=Manrope:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -27,56 +27,56 @@
 }
 
 :root {
-  --background: 42 37% 94%;
-  --foreground: 18 24% 12%;
-  --border: 35 19% 79%;
-  --input: 35 19% 79%;
-  --ring: 16 86% 53%;
-  --card: 40 35% 91%;
-  --card-foreground: 18 24% 12%;
-  --primary: 16 86% 53%;
-  --primary-foreground: 42 37% 94%;
-  --secondary: 162 43% 28%;
-  --muted: 37 22% 87%;
-  --muted-foreground: 20 11% 40%;
-  --accent: 48 97% 58%;
-  --accent-foreground: 18 24% 12%;
-  --destructive: 0 72% 48%;
-  --destructive-foreground: 40 35% 95%;
-  --popover: 42 37% 94%;
-  --popover-foreground: 18 24% 12%;
-  --sidebar: 42 37% 94%;
-  --sidebar-foreground: 18 24% 12%;
-  --sidebar-border: 35 19% 79%;
-  --sidebar-primary: 16 86% 53%;
-  --sidebar-primary-foreground: 42 37% 94%;
-  --sidebar-accent: 37 22% 87%;
-  --sidebar-accent-foreground: 18 24% 12%;
-  --sidebar-ring: 16 86% 53%;
-  --chart-1: 16 86% 53%;
-  --chart-2: 162 43% 28%;
-  --chart-3: 48 97% 58%;
-  --chart-4: 30 56% 61%;
-  --chart-5: 210 30% 38%;
+  --background: 42 39% 91%;
+  --foreground: 190 22% 13%;
+  --border: 38 19% 75%;
+  --input: 38 19% 75%;
+  --ring: 15 72% 49%;
+  --card: 42 35% 87%;
+  --card-foreground: 190 22% 13%;
+  --primary: 15 72% 49%;
+  --primary-foreground: 42 39% 91%;
+  --secondary: 186 37% 25%;
+  --muted: 39 25% 83%;
+  --muted-foreground: 25 14% 39%;
+  --accent: 47 84% 58%;
+  --accent-foreground: 190 22% 13%;
+  --destructive: 0 68% 45%;
+  --destructive-foreground: 42 39% 91%;
+  --popover: 42 39% 91%;
+  --popover-foreground: 190 22% 13%;
+  --sidebar: 42 39% 91%;
+  --sidebar-foreground: 190 22% 13%;
+  --sidebar-border: 38 19% 75%;
+  --sidebar-primary: 15 72% 49%;
+  --sidebar-primary-foreground: 42 39% 91%;
+  --sidebar-accent: 39 25% 83%;
+  --sidebar-accent-foreground: 190 22% 13%;
+  --sidebar-ring: 15 72% 49%;
+  --chart-1: 15 72% 49%;
+  --chart-2: 186 37% 25%;
+  --chart-3: 47 84% 58%;
+  --chart-4: 34 57% 60%;
+  --chart-5: 210 28% 39%;
   --app-font-sans: 'Manrope', sans-serif;
-  --app-font-serif: 'Fraunces', serif;
+  --app-font-serif: 'Fraunces', Georgia, serif;
   --app-font-mono: 'DM Mono', monospace;
   --radius: 1rem;
 }
 
 .dark {
-  --background: 18 24% 12%; --foreground: 42 37% 94%;
-  --border: 20 14% 28%; --input: 20 14% 28%; --ring: 16 86% 58%;
-  --card: 18 19% 17%; --card-foreground: 42 37% 94%;
-  --primary: 16 86% 58%; --primary-foreground: 18 24% 12%;
-  --secondary: 162 43% 38%; --muted: 20 14% 22%;
-  --muted-foreground: 35 16% 68%; --accent: 48 97% 58%; --accent-foreground: 18 24% 12%;
-  --destructive: 0 62% 42%; --destructive-foreground: 42 37% 94%;
-  --popover: 18 19% 17%; --popover-foreground: 42 37% 94%;
-  --sidebar: 18 24% 12%; --sidebar-foreground: 42 37% 94%; --sidebar-border: 20 14% 28%;
-  --sidebar-primary: 16 86% 58%; --sidebar-primary-foreground: 18 24% 12%;
-  --sidebar-accent: 20 14% 22%; --sidebar-accent-foreground: 42 37% 94%; --sidebar-ring: 16 86% 58%;
-  --chart-1: 16 86% 58%; --chart-2: 162 43% 38%; --chart-3: 48 97% 58%; --chart-4: 30 56% 61%; --chart-5: 210 30% 48%;
+  --background: 190 22% 13%; --foreground: 42 39% 91%;
+  --border: 190 14% 29%; --input: 190 14% 29%; --ring: 15 72% 58%;
+  --card: 190 18% 18%; --card-foreground: 42 39% 91%;
+  --primary: 15 72% 58%; --primary-foreground: 190 22% 13%;
+  --secondary: 186 34% 37%; --muted: 190 14% 23%;
+  --muted-foreground: 39 20% 68%; --accent: 47 84% 58%; --accent-foreground: 190 22% 13%;
+  --destructive: 0 62% 42%; --destructive-foreground: 42 39% 91%;
+  --popover: 190 18% 18%; --popover-foreground: 42 39% 91%;
+  --sidebar: 190 22% 13%; --sidebar-foreground: 42 39% 91%; --sidebar-border: 190 14% 29%;
+  --sidebar-primary: 15 72% 58%; --sidebar-primary-foreground: 190 22% 13%;
+  --sidebar-accent: 190 14% 23%; --sidebar-accent-foreground: 42 39% 91%; --sidebar-ring: 15 72% 58%;
+  --chart-1: 15 72% 58%; --chart-2: 186 34% 37%; --chart-3: 47 84% 58%; --chart-4: 34 57% 60%; --chart-5: 210 28% 49%;
 }
 
 @layer base {
@@ -90,16 +90,26 @@
 :focus-visible { outline: 3px solid hsl(var(--primary)); outline-offset: 4px; }
 .display { font-family: var(--app-font-serif); letter-spacing: -.065em; }
 .mono { font-family: var(--app-font-mono); letter-spacing: .12em; text-transform: uppercase; }
-.nav-link { position: relative; font-size: 12px; font-weight: 700; }
-.nav-link::after { content: ''; position: absolute; height: 1px; left: 0; right: 100%; bottom: -6px; background: hsl(var(--primary)); transition: right .22s ease; }
+.nav-link { position: relative; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.nav-link::after { content: ''; position: absolute; height: 1px; left: 0; right: 100%; bottom: -7px; background: hsl(var(--primary)); transition: right .25s ease; }
 .nav-link:hover::after { right: 0; }
-.grain::after { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 50; opacity: .13; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.88' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"); }
-.reveal { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
-.reveal-delay { animation: rise .8s .15s cubic-bezier(.2,.7,.2,1) both; }
-@keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes marquee { to { transform: translateX(-50%); } }
-.marquee-track { animation: marquee 28s linear infinite; }
+.grain::after { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 50; opacity: .1; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.88' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E"); }
+.marquee-track { animation: marquee 34s linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
+.map-lines { background-image: radial-gradient(ellipse at center, transparent 0 35%, rgba(224,202,143,.25) 35.2% 35.5%, transparent 35.8% 48%, rgba(224,202,143,.18) 48.2% 48.5%, transparent 48.8%), repeating-linear-gradient(18deg, transparent 0 36px, rgba(25,54,54,.08) 37px, transparent 38px 74px); }
+.scene-shade { background: linear-gradient(180deg, rgba(13,34,35,.03) 15%, rgba(13,34,35,.12) 43%, rgba(13,34,35,.82) 100%); }
+.story-paper { background-image: radial-gradient(ellipse at 50% 10%, rgba(255,250,226,.22), transparent 62%), repeating-linear-gradient(0deg, transparent 0 29px, rgba(26,54,55,.035) 30px); }
+.reveal { opacity: 0; transform: translateY(32px); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+.reveal-left { opacity: 0; transform: translateX(-26px); }
+.reveal-left.is-visible { opacity: 1; transform: translateX(0); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+.reveal-right { opacity: 0; transform: translateX(26px); }
+.reveal-right.is-visible { opacity: 1; transform: translateX(0); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+.hero-title { animation: title-rise 1s cubic-bezier(.2,.7,.2,1) .12s both; }
+.hero-kicker { animation: title-rise .7s ease both; }
+@keyframes title-rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes marquee { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; }
 }
