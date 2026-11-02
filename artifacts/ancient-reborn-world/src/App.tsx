@@ -53,15 +53,15 @@ function Home() {
 
       <section id="top" className="relative mx-auto max-w-[1440px] px-5 pb-9 md:px-12 md:pb-16">
         <div className="relative min-h-[650px] overflow-hidden rounded-[1.6rem] bg-[#ccb87e] md:min-h-[690px] md:rounded-[2.2rem]">
-          <img src="/images/awakening.jpg" alt="A young explorer looks across a vast city rising from the desert sea" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <img src="/images/namaris-at-dawn.jpg" alt="At sunrise, Aya and her moon-fox Tavi look across the turquoise Veyruun Expanse toward Namaris rising from the sea." className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#191913]/65 via-[#191913]/25 to-transparent md:via-[#191913]/10" />
           <div className="relative flex min-h-[650px] max-w-3xl flex-col justify-center px-7 py-16 text-[#fff6e6] md:min-h-[690px] md:px-16 md:py-20">
-            <p className="mono mb-6 flex items-center gap-2 text-[10px] text-[#f9d864]"><span className="h-2 w-2 rounded-full bg-[#f9d864]" /> AN ORIGINAL STORY UNIVERSE</p>
-            <h1 className="display max-w-[780px] text-[clamp(4.5rem,10vw,9.6rem)] font-bold leading-[.77]">The old<br />world is<br /><em className="font-medium text-[#f4cc57]">waking.</em></h1>
-            <p className="mt-8 max-w-[370px] text-base leading-7 text-[#fff6e6]/85 md:text-lg">Forgotten civilizations. Unfinished magic. A new generation with everything to find.</p>
+            <p className="mono mb-6 flex items-center gap-2 text-[10px] text-[#f9d864]"><span className="h-2 w-2 rounded-full bg-[#f9d864]" /> THE FIRST RESONANCE</p>
+            <h1 className="display max-w-[780px] text-[clamp(4.5rem,10vw,9.6rem)] font-bold leading-[.77]">A city<br />beneath<br /><em className="font-medium text-[#f4cc57]">the sea.</em></h1>
+            <p className="mt-8 max-w-[390px] text-base leading-7 text-[#fff6e6]/85 md:text-lg">At dawn, Namaris returns. A bell below the waves calls the lost world back to life.</p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a href="#world" className="inline-flex items-center gap-3 rounded-full bg-[#e85332] px-6 py-4 text-sm font-extrabold text-[#fff8eb] transition-all hover:-translate-y-1 hover:bg-[#f06b48]" data-testid="link-explore-world">STEP INTO THE WORLD <ArrowRight size={17} /></a>
-              <span className="mono text-[9px] text-white/70">A MYTHIC ADVENTURE, REIMAGINED</span>
+              <span className="mono text-[9px] text-white/70">AYA VENN · CARTOGRAPHER OF THE UNRETURNED</span>
             </div>
           </div>
           <div className="absolute bottom-6 right-7 hidden items-center gap-3 text-white/85 md:flex"><span className="mono text-[9px]">SCROLL TO DISCOVER</span><ArrowDown size={15} /></div>
@@ -77,7 +77,7 @@ function Home() {
       <section className="marquee overflow-hidden border-y border-[#261f19] bg-[#f2cb55] py-4 text-[#261f19]">
         <div className="marquee-track flex w-max items-center gap-7 whitespace-nowrap">
           {[0,1].map((copy) => <div key={copy} className="flex items-center gap-7">
-            {['LOST CITIES','BRAVE HEARTS','OLD MAGIC','NEW WORLDS','THE MAP IS NOT THE TERRITORY'].map((item) => <span key={item} className="flex items-center gap-7"><span className="display text-[29px] font-bold italic md:text-[37px]">{item}</span><span className="text-[#e85332]"><Sparkles size={20} /></span></span>)}
+            {['THE LONG QUIET','NAMARIS RETURNS','THE FIRST RESONANCE','A COMPASS TO NOWHERE','THE MAP IS NOT THE TERRITORY'].map((item) => <span key={item} className="flex items-center gap-7"><span className="display text-[29px] font-bold italic md:text-[37px]">{item}</span><span className="text-[#e85332]"><Sparkles size={20} /></span></span>)}
           </div>)}
         </div>
       </section>
@@ -85,23 +85,23 @@ function Home() {
       <section id="world" className="mx-auto grid max-w-[1440px] gap-12 px-5 py-24 md:grid-cols-[.83fr_1.17fr] md:px-12 md:py-36">
         <div className="md:sticky md:top-20 md:self-start">
           <p className="mono mb-5 text-[10px] text-[#e85332]">01 / THE WORLD</p>
-          <h2 className="display max-w-[550px] text-[clamp(3.7rem,7vw,7rem)] font-bold leading-[.86]">This is not<br />the end of<br /><em className="font-medium text-[#e85332]">the story.</em></h2>
-          <p className="mt-7 max-w-[420px] text-[15px] leading-7 text-[#655a4c]">Beneath the familiar ground, the first kingdoms are stirring. Their cities, songs and impossible machines have waited centuries for someone to listen.</p>
+          <h2 className="display max-w-[550px] text-[clamp(3.7rem,7vw,7rem)] font-bold leading-[.86]">The world<br />did not end.<br /><em className="font-medium text-[#e85332]">It went quiet.</em></h2>
+          <p className="mt-7 max-w-[420px] text-[15px] leading-7 text-[#655a4c]">Long ago, the Long Quiet erased the first kingdoms and swallowed Namaris beneath the Veyruun Expanse. Now the city returns at dawn—and the sea is ringing.</p>
           <a href="#stories" className="mt-8 inline-flex items-center gap-3 border-b border-[#261f19] pb-2 text-xs font-extrabold tracking-wide transition-colors hover:text-[#e85332] hover:border-[#e85332]" data-testid="link-discover-stories">FOLLOW THE FOOTPRINTS <ArrowRight size={14} /></a>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <article className="flex min-h-[260px] flex-col justify-between rounded-[1.4rem] bg-[#1e493e] p-7 text-[#f6efd9] sm:mt-14 md:min-h-[330px] md:p-9">
-            <span className="mono text-[9px] text-[#d4c581]">A LAND THAT REMEMBERS</span>
-            <div><span className="mb-4 block h-px w-12 bg-[#d4c581]" /><h3 className="display text-4xl font-semibold leading-none">The Veyruun<br />Expanse</h3><p className="mt-4 max-w-[270px] text-sm leading-6 text-[#f6efd9]/75">Where a salt sea swallowed the old roads, and the horizon never tells the whole truth.</p></div>
+            <span className="mono text-[9px] text-[#d4c581]">THE SEA THAT TOOK A KINGDOM</span>
+            <div><span className="mb-4 block h-px w-12 bg-[#d4c581]" /><h3 className="display text-4xl font-semibold leading-none">The Veyruun<br />Expanse</h3><p className="mt-4 max-w-[270px] text-sm leading-6 text-[#f6efd9]/75">Beneath its bright, salt water lies Namaris—and every road the Long Quiet erased.</p></div>
           </article>
           <article className="flex min-h-[260px] flex-col justify-between rounded-[1.4rem] bg-[#e7a45e] p-7 text-[#261f19] sm:-mt-4 md:min-h-[330px] md:p-9">
-            <span className="mono text-[9px]">A POWER WITH A PULSE</span>
-            <div><span className="mb-4 block h-px w-12 bg-[#261f19]" /><h3 className="display text-4xl font-semibold leading-none">The First<br />Resonance</h3><p className="mt-4 max-w-[270px] text-sm leading-6 text-[#261f19]/75">Magic is not a thing to wield. It is a thing that remembers being heard.</p></div>
+            <span className="mono text-[9px]">A BELL BELOW THE WAVES</span>
+            <div><span className="mb-4 block h-px w-12 bg-[#261f19]" /><h3 className="display text-4xl font-semibold leading-none">The First<br />Resonance</h3><p className="mt-4 max-w-[270px] text-sm leading-6 text-[#261f19]/75">Its note travels through stone and map, calling the vanished city back at dawn.</p></div>
           </article>
           <div className="relative col-span-1 min-h-[270px] overflow-hidden rounded-[1.4rem] bg-[#d4c9ae] sm:col-span-2 md:min-h-[380px]">
-            <img src="/images/awakening.jpg" alt="Ancient towers and floating stone above the turquoise expanse" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <img src="/images/namaris-at-dawn.jpg" alt="Namaris rises from the Veyruun Expanse in the first light, with Aya and Tavi on the old stone causeway." className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1b201b]/75 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 text-[#fff6e6] md:bottom-9 md:left-9"><span className="mono text-[9px] text-[#f2cb55]">A FRAGMENT FROM THE ATLAS</span><p className="display mt-2 text-3xl font-semibold md:text-5xl">The city beneath the tide</p></div>
+            <div className="absolute bottom-6 left-6 text-[#fff6e6] md:bottom-9 md:left-9"><span className="mono text-[9px] text-[#f2cb55]">CHART 07—A · FIRST LIGHT</span><p className="display mt-2 text-3xl font-semibold md:text-5xl">Namaris, returned</p></div>
             <span className="absolute right-5 top-5 rounded-full bg-[#f3eddf] px-3 py-2 text-[9px] mono">CHART 07—A</span>
           </div>
         </div>
@@ -110,16 +110,17 @@ function Home() {
       <section id="stories" className="bg-[#e7e0d1] py-24 md:py-32">
         <div className="mx-auto max-w-[1440px] px-5 md:px-12">
           <div className="flex flex-col justify-between gap-7 md:flex-row md:items-end">
-            <div><p className="mono mb-5 text-[10px] text-[#e85332]">02 / THE STORIES</p><h2 className="display max-w-[650px] text-[clamp(3.4rem,7vw,6.7rem)] font-bold leading-[.84]">Every legend<br />starts <em className="font-medium">somewhere.</em></h2></div>
-            <p className="max-w-[300px] pb-1 text-sm leading-6 text-[#655a4c]">Meet the people who stumble into a world that has been waiting for them.</p>
+            <div><p className="mono mb-5 text-[10px] text-[#e85332]">02 / THE STORIES</p><h2 className="display max-w-[650px] text-[clamp(3.4rem,7vw,6.7rem)] font-bold leading-[.84]">Two travelers.<br />One city<br /><em className="font-medium">waking.</em></h2></div>
+            <p className="max-w-[300px] pb-1 text-sm leading-6 text-[#655a4c]">Aya follows a compass that points to places that have not returned. Tavi hears what the city remembers.</p>
           </div>
           <div className="mt-12 grid gap-5 md:mt-16 md:grid-cols-[1.03fr_.97fr]">
             <article className="group relative min-h-[500px] overflow-hidden rounded-[1.6rem] bg-[#e8bf70] md:min-h-[600px]">
-              <img src="/images/character-aya.jpg" alt="Aya, a young relic seeker with a bright scarf and a carved bronze compass" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.035]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#261f19]/85 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_28%,#c6a45c_0%,transparent_45%),linear-gradient(145deg,#ddcfad,#49665a_72%,#273f39)]" />
+              <div className="absolute bottom-[-3%] right-[2%] top-[2%] flex items-end transition-transform duration-700 group-hover:translate-y-[-5px]"><img src="/images/aya-cutout.png" alt="Aya Venn, a young cartographer with a brass compass and a map in hand." className="h-full max-h-[570px] w-auto object-contain object-bottom drop-shadow-[0_16px_22px_rgba(27,26,18,.28)]" /></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#261f19]/90 via-[#261f19]/5 to-transparent" />
               <div className="absolute left-6 top-6 rounded-full bg-[#f3eddf] px-4 py-2 mono text-[9px]">MEET YOUR GUIDE</div>
               <div className="absolute bottom-7 left-7 right-7 flex items-end justify-between gap-4 text-[#fff6e6] md:bottom-10 md:left-10">
-                <div><span className="mono text-[9px] text-[#f2cb55]">THE WAYFINDER</span><h3 className="display mt-2 text-5xl font-bold md:text-7xl">Aya Venn</h3><p className="mt-3 max-w-[350px] text-sm leading-6 text-white/80">A mapmaker who keeps finding places that do not want to be found.</p></div>
+                <div><span className="mono text-[9px] text-[#f2cb55]">CARTOGRAPHER OF THE UNRETURNED</span><h3 className="display mt-2 text-5xl font-bold md:text-7xl">Aya Venn</h3><p className="mt-3 max-w-[350px] text-sm leading-6 text-white/80">Her inherited brass compass points toward places that have not yet returned.</p></div>
                 <a href="#dispatch" aria-label="Get Aya's field notes" className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#e85332] transition-transform group-hover:rotate-45" data-testid="link-aya-notes"><ArrowUpRight size={20} /></a>
               </div>
             </article>
@@ -130,14 +131,14 @@ function Home() {
                 <div className="relative z-10 flex max-w-[350px] flex-col items-center gap-4 px-6 text-center">
                   <span className="grid h-16 w-16 place-items-center rounded-full border border-white/60 bg-white/10 transition-all group-hover:scale-110 group-hover:bg-[#e85332]">{excerptOpen ? <X size={21} /> : <BookOpen size={21} />}</span>
                   <span className="mono text-[10px]">{excerptOpen ? 'CLOSE THE EXCERPT' : 'READ THE OPENING LINES'}</span>
-                  {excerptOpen && <span className="display text-xl italic leading-snug md:text-2xl" aria-live="polite">“The dunes fell silent when the old bells rang beneath the sea.”</span>}
+                  {excerptOpen && <span className="display text-lg italic leading-snug md:text-xl" aria-live="polite">“At dawn, the sea withdrew from the steps of Namaris. Aya’s compass turned in her palm, pointing—not north, but down. Beside her, Tavi’s collar bell gave one clear answer. Somewhere below the stones, the buried bell was still ringing.”</span>}
                 </div>
                 <span className="absolute bottom-5 left-6 mono text-[9px] text-white/70">ARCHIVE FRAGMENT / 01</span>
                 <span className="absolute right-6 top-5 mono text-[9px] text-white/70">OPEN TO READ</span>
               </button>
               <div className="flex min-h-[170px] items-center justify-between gap-6 rounded-[1.6rem] bg-[#f3eddf] p-7 md:p-9">
-                <div><span className="mono text-[9px] text-[#e85332]">A NOTE FROM THE ARCHIVE</span><p className="display mt-3 max-w-[410px] text-3xl font-semibold leading-[1.05] md:text-4xl">“The ruins were not empty.<br />They were listening.”</p></div>
-                <Sparkles className="hidden shrink-0 text-[#e85332] md:block" size={32} />
+                <div className="relative z-10 max-w-[70%]"><span className="mono text-[9px] text-[#e85332]">TAVI · MOON-FOX</span><p className="display mt-3 max-w-[410px] text-2xl font-semibold leading-[1.05] md:text-3xl">His collar bell answers the buried one. He remembers fragments no map can hold.</p></div>
+                <img src="/images/tavi-cutout.png" alt="Tavi, Aya’s small moon-fox companion with a bell on his collar and a star-marked tail." className="absolute -bottom-4 -right-5 h-[155px] w-[180px] object-contain object-bottom md:-bottom-6 md:right-2 md:h-[205px] md:w-[240px]" />
               </div>
             </div>
           </div>
@@ -150,17 +151,17 @@ function Home() {
             <div className="absolute -right-16 -top-16 h-[350px] w-[350px] rounded-full border border-[#f9f0db]/30" />
             <div className="absolute -right-3 top-0 h-[260px] w-[260px] rounded-full border border-[#f9f0db]/30" />
             <div className="relative flex h-full min-h-[300px] flex-col justify-between">
-              <span className="mono text-[10px]">A WORLD MADE TO BE SHARED</span>
-              <div><Compass size={44} strokeWidth={1.2} /><p className="display mt-5 max-w-[450px] text-5xl font-semibold leading-[.94] md:text-7xl">Bring your<br />own wonder.</p></div>
-              <span className="mono text-[9px] text-[#f9f0db]/75">A CREATIVE UNIVERSE, OPENING OUTWARD</span>
+              <span className="mono text-[10px]">THE QUESTION AT THE HEART OF IT</span>
+              <div><Compass size={44} strokeWidth={1.2} /><p className="display mt-5 max-w-[450px] text-5xl font-semibold leading-[.94] md:text-7xl">Why is<br />Namaris<br />waking now?</p></div>
+              <span className="mono text-[9px] text-[#f9f0db]/75">AYA AND TAVI FOLLOW THE FIRST RESONANCE</span>
             </div>
           </div>
           <div>
             <p className="mono mb-5 text-[10px] text-[#e85332]">03 / MAKE IT YOURS</p>
-            <h2 className="display max-w-[640px] text-[clamp(3.5rem,7vw,6.4rem)] font-bold leading-[.84]">The best worlds<br />leave room for<br /><em className="font-medium text-[#1e493e]">you.</em></h2>
-            <p className="mt-7 max-w-[510px] text-[15px] leading-7 text-[#655a4c]">Ancient Reborn is a living story universe: animated adventures, illustrated chronicles, odd little artifacts and pathways for artists to build alongside us.</p>
+            <h2 className="display max-w-[640px] text-[clamp(3.5rem,7vw,6.4rem)] font-bold leading-[.84]">The first<br />journey begins<br /><em className="font-medium text-[#1e493e]">at dawn.</em></h2>
+            <p className="mt-7 max-w-[510px] text-[15px] leading-7 text-[#655a4c]">Aya and Tavi set out to learn why Namaris is waking now. Her compass leads toward the missing places; his bell answers the sound beneath the sea. Together, they follow the First Resonance into a world returning one fragment at a time.</p>
             <div className="mt-8 flex flex-col gap-4 border-t border-[#cfc5b5] pt-5 sm:flex-row sm:items-center sm:justify-between">
-              <div><span className="mono text-[9px] text-[#8a7e6e]">NEXT UP</span><p className="mt-1 font-bold">The Atlas of Unfinished Places</p></div>
+              <div><span className="mono text-[9px] text-[#8a7e6e]">THE FIRST QUESTION</span><p className="mt-1 font-bold">Why is Namaris waking now?</p></div>
               <a href="#dispatch" className="inline-flex w-fit items-center gap-3 rounded-full border border-[#261f19] px-5 py-3 text-xs font-extrabold transition-colors hover:bg-[#261f19] hover:text-[#f3eddf]" data-testid="link-creator-invite">FIND YOUR WAY IN <ArrowRight size={15} /></a>
             </div>
           </div>
@@ -171,10 +172,10 @@ function Home() {
         <div className="absolute -right-20 -top-24 h-[420px] w-[420px] rounded-full border border-[#f3eddf]/10" />
         <div className="absolute -right-2 -top-2 h-[280px] w-[280px] rounded-full border border-[#f3eddf]/10" />
         <div className="relative mx-auto grid max-w-[1280px] gap-12 md:grid-cols-[1fr_.8fr] md:items-end">
-          <div><p className="mono mb-5 text-[10px] text-[#f2cb55]">THE FIRST DISPATCH</p><h2 className="display max-w-[700px] text-[clamp(3.7rem,8vw,7.4rem)] font-bold leading-[.82]">Find out what<br />wakes <em className="font-medium text-[#f2cb55]">next.</em></h2><p className="mt-7 max-w-[430px] text-sm leading-6 text-[#f3eddf]/75">Notes from beyond the map. New art, small mysteries and first looks from the world we are building.</p></div>
+          <div><p className="mono mb-5 text-[10px] text-[#f2cb55]">THE FIRST DISPATCH</p><h2 className="display max-w-[700px] text-[clamp(3.7rem,8vw,7.4rem)] font-bold leading-[.82]">The bell has<br />called. What<br /><em className="font-medium text-[#f2cb55]">answers?</em></h2><p className="mt-7 max-w-[430px] text-sm leading-6 text-[#f3eddf]/75">Namaris has returned at dawn. Aya and Tavi are following the resonance to discover why—and what else the sea may give back.</p></div>
           <div className="rounded-2xl border border-[#f3eddf]/25 bg-[#f3eddf]/10 p-6 md:p-8">
-            <p className="mono text-[9px] text-[#f2cb55]">THE ATLAS IS OPEN</p>
-            <p className="display mt-4 max-w-[420px] text-3xl font-semibold leading-tight md:text-4xl">Every good journey begins with a question.</p>
+            <p className="mono text-[9px] text-[#f2cb55]">THE FIRST JOURNEY</p>
+            <p className="display mt-4 max-w-[420px] text-3xl font-semibold leading-tight md:text-4xl">Why is Namaris waking now?</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="#world" className="inline-flex items-center gap-2 rounded-full bg-[#f2cb55] px-5 py-3 text-xs font-extrabold text-[#261f19] transition-colors hover:bg-[#f6d878]" data-testid="link-dispatch-world">EXPLORE THE WORLD <ArrowRight size={15} /></a>
               <a href="#stories" className="inline-flex items-center gap-2 rounded-full border border-[#f3eddf]/40 px-5 py-3 text-xs font-extrabold text-[#f3eddf] transition-colors hover:bg-[#f3eddf]/10" data-testid="link-dispatch-stories">MEET AYA <ArrowUpRight size={15} /></a>
@@ -185,7 +186,7 @@ function Home() {
 
       <footer className="mx-auto flex max-w-[1440px] flex-col gap-6 px-5 py-8 text-[10px] md:flex-row md:items-center md:justify-between md:px-12">
         <a href="#top" className="flex items-center gap-2 font-bold tracking-wide" data-testid="link-footer-home"><Compass size={17} className="text-[#e85332]" /> ANCIENT REBORN WORLD</a>
-        <span className="mono text-[#8a7e6e]">THE STORIES WE BURY FIND A WAY BACK.</span>
+        <span className="mono text-[#8a7e6e]">WHEN THE SEA RINGS, THE LOST RETURN.</span>
         <a href="#top" className="inline-flex items-center gap-2 font-semibold transition-colors hover:text-[#e85332]" data-testid="link-back-top">BACK TO THE SURFACE <ArrowUpRight size={13} /></a>
       </footer>
     </main>
