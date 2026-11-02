@@ -9,6 +9,7 @@ import { ArrowDown, ArrowRight, ArrowUpRight, Bell, BookOpen, Compass, Menu, Mov
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
+  Link,
   Route,
   Switch,
   useLocation,
@@ -72,10 +73,11 @@ function Home() {
             <span className="mono mt-1 block text-[8px] tracking-[.2em]">REBORN WORLD</span>
           </span>
         </a>
-        <nav className="hidden items-center gap-9 md:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-6 md:flex lg:gap-9" aria-label="Main navigation">
           <a className="nav-link" href="#world" data-testid="link-world">The world</a>
           <a className="nav-link" href="#aya" data-testid="link-aya">Aya & Tavi</a>
           <a className="nav-link" href="#first-resonance" data-testid="link-resonance">First resonance</a>
+          <Link className="nav-link" href="/bongo-kiko" data-testid="link-bongo-kiko">Bongo & Kiko</Link>
         </nav>
         <a href="#first-resonance" className="hidden items-center gap-2 rounded-full border border-[#f6f0df]/60 px-5 py-3 text-[10px] font-extrabold tracking-[.12em] transition-all hover:-translate-y-0.5 hover:bg-[#f6f0df] hover:text-[#1c302f] md:flex" data-testid="link-enter-world">
           ENTER THE STORY <ArrowUpRight size={14} />
@@ -88,6 +90,7 @@ function Home() {
         <a onClick={closeMenu} className="block border-b border-[#d7ccbc] py-3 font-semibold" href="#world">The world</a>
         <a onClick={closeMenu} className="block border-b border-[#d7ccbc] py-3 font-semibold" href="#aya">Aya & Tavi</a>
         <a onClick={closeMenu} className="block border-b border-[#d7ccbc] py-3 font-semibold" href="#first-resonance">First resonance</a>
+        <Link onClick={closeMenu} className="block border-b border-[#d7ccbc] py-3 font-semibold" href="/bongo-kiko" data-testid="link-mobile-bongo-kiko">Bongo & Kiko</Link>
         <a onClick={closeMenu} className="mt-4 inline-flex rounded-full bg-[#c94c32] px-5 py-3 text-xs font-bold text-[#fff6e6]" href="#first-resonance">Enter the story</a>
       </nav>}
 
