@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { ArrowDownRight, ArrowLeft, ArrowRight, ArrowUpRight, Clapperboard, Menu, Play, Sparkles, X } from 'lucide-react';
 import './bongo-kiko.css';
+import './bongo-kiko-lively.css';
 
 type Page = 'intro' | 'characters' | 'bongo' | 'kiko' | 'adventures';
 
