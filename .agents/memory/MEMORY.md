@@ -1,0 +1,1 @@
+- [Bongo & Kiko scope](bongo-kiko-scope.md) — keep future show-site work additive and avoid changing the original site screens unless asked.
