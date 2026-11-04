@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { TiktokLiveStats } from '@/components/tiktok-live-stats';
 import NotFound from '@/pages/not-found';
 import BongoKikoPage from '@/pages/bongo-kiko';
 import { ArrowDown, ArrowRight, ArrowUpRight, Bell, BookOpen, Compass, Menu, MoveUpRight, Waves, X } from 'lucide-react';
@@ -77,6 +78,7 @@ function Home() {
           <a className="nav-link" href="#world" data-testid="link-world">The world</a>
           <a className="nav-link" href="#aya" data-testid="link-aya">Aya & Tavi</a>
           <a className="nav-link" href="#first-resonance" data-testid="link-resonance">First resonance</a>
+          <a className="nav-link" href="#community" data-testid="link-community">Community</a>
           <Link className="nav-link" href="/bongo-kiko" data-testid="link-bongo-kiko">Bongo & Kiko</Link>
         </nav>
         <a href="#first-resonance" className="hidden items-center gap-2 rounded-full border border-[#f6f0df]/60 px-5 py-3 text-[10px] font-extrabold tracking-[.12em] transition-all hover:-translate-y-0.5 hover:bg-[#f6f0df] hover:text-[#1c302f] md:flex" data-testid="link-enter-world">
@@ -90,6 +92,7 @@ function Home() {
         <a onClick={closeMenu} className="block border-b border-[#d7ccbc] py-3 font-semibold" href="#world">The world</a>
         <a onClick={closeMenu} className="block border-b border-[#d7ccbc] py-3 font-semibold" href="#aya">Aya & Tavi</a>
         <a onClick={closeMenu} className="block border-b border-[#d7ccbc] py-3 font-semibold" href="#first-resonance">First resonance</a>
+        <a onClick={closeMenu} className="block border-b border-[#d7ccbc] py-3 font-semibold" href="#community">Community</a>
         <Link onClick={closeMenu} className="block border-b border-[#d7ccbc] py-3 font-semibold" href="/bongo-kiko" data-testid="link-mobile-bongo-kiko">Bongo & Kiko</Link>
         <a onClick={closeMenu} className="mt-4 inline-flex rounded-full bg-[#c94c32] px-5 py-3 text-xs font-bold text-[#fff6e6]" href="#first-resonance">Enter the story</a>
       </nav>}
@@ -278,6 +281,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <TiktokLiveStats />
 
       <section className="relative overflow-hidden bg-[#d58650] px-5 py-24 text-[#263532] md:py-32">
         <div className="absolute -right-24 -top-32 h-[520px] w-[520px] rounded-full border border-[#263532]/15" />
