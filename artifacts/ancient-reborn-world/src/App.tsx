@@ -127,7 +127,7 @@ function Home() {
       <div className="marquee overflow-hidden border-y border-[#1c302f]/30 bg-[#e7c65e] py-3.5 text-[#1c302f]" aria-label="The Long Quiet. Namaris returns. The First Resonance.">
         <div className="marquee-track flex w-max items-center gap-8 whitespace-nowrap">
           {[0, 1].map((copy) => <div key={copy} className="flex items-center gap-8">
-            {['THE LONG QUIET', 'NAMARIS RETURNS', 'THE FIRST RESONANCE', 'A COMPASS TO NOWHERE', 'SOMEWHERE BELOW'].map((item) => <span key={item} className="flex items-center gap-8"><span className="display text-[27px] font-semibold italic md:text-[34px]">{item}</span><span className="text-[#b94c34]"><Bell size={15} strokeWidth={1.5} /></span></span>)}
+            {['THE LONG QUIET', 'NAMARIS RETURNS', 'THE FIRST RESONANCE', 'A COMPASS TO NOWHERE', 'SOMEWHERE BELOW', '44 TIKTOK FOLLOWERS', '17 YOUTUBE SUBSCRIBERS'].map((item) => <span key={item} className="flex items-center gap-8"><span className="display text-[27px] font-semibold italic md:text-[34px]">{item}</span><span className="text-[#b94c34]"><Bell size={15} strokeWidth={1.5} /></span></span>)}
           </div>)}
         </div>
       </div>
