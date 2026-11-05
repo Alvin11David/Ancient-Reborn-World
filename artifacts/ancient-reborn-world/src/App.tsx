@@ -319,7 +319,7 @@ function Home() {
             </span>
             <ArrowUpRight size={24} className="text-[#b94c34] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
-            <a href="https://www.youtube.com/channel/UCtNUD23kxh9qAOTobj4LdjQ?sub_confirmation=1" target="_blank" rel="noreferrer" className="group flex items-center justify-between rounded-[1.25rem] border border-[#1c302f]/25 bg-[#f5efdf] p-6 transition-transform hover:-translate-y-1 md:p-8" data-testid="link-youtube-channel">
+            <div className="rounded-[1.25rem] border border-[#1c302f]/25 bg-[#f5efdf] p-6 md:p-8" data-testid="link-youtube-channel">
               <span className="flex items-center gap-4">
                 <img src="https://yt3.googleusercontent.com/Km7jjrB8OZTfRAHlO0BN_HRow9dRd8DKttVyHIVku18dgKjSBV0w2yDJRkXEO22vO_ZKVeFTsg=s160-c-k-c0x00ffffff-no-rj" alt="Ancient Reborn YouTube channel avatar" className="h-14 w-14 rounded-full object-cover" />
                 <span>
@@ -328,8 +328,10 @@ function Home() {
                   <span className="mono mt-2 block text-[8px] text-[#53605a]">SUBSCRIBERS · 57 VIDEOS</span>
                 </span>
               </span>
-              <ArrowUpRight size={24} className="shrink-0 text-[#b94c34] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </a>
+              <a href="https://www.youtube.com/channel/UCtNUD23kxh9qAOTobj4LdjQ?sub_confirmation=1" target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#b94c34] px-5 py-3 text-[10px] font-extrabold tracking-[.12em] text-[#f5efdf] transition-colors hover:bg-[#1c302f]" data-testid="button-youtube-subscribe">
+                SUBSCRIBE ON YOUTUBE <ArrowUpRight size={15} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
