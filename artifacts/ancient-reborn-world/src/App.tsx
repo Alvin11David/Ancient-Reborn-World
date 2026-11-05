@@ -303,6 +303,37 @@ function Home() {
         </div>
       </section>
 
+      <section className="border-t border-[#1c302f]/15 bg-[#e9e2d2] px-5 py-16 md:px-12 md:py-20">
+        <div className="mx-auto flex max-w-[1280px] flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="mono text-[9px] text-[#b94c34]">FOLLOW THE RETURN</p>
+            <h2 className="display mt-4 text-[clamp(2.8rem,6vw,5.5rem)] font-medium leading-[.86] tracking-[-.07em]">The story<br /><em>keeps moving.</em></h2>
+            <p className="mt-5 max-w-[390px] text-[13px] leading-6 text-[#53605a]">Find Ancient Reborn World on TikTok for new fragments from Namaris.</p>
+          </div>
+          <div className="grid w-full max-w-[760px] gap-4 sm:grid-cols-2">
+            <a href="https://www.tiktok.com/@ancientrebornworld" target="_blank" rel="noreferrer" className="group flex items-center justify-between rounded-[1.25rem] border border-[#1c302f]/25 bg-[#f5efdf] p-6 transition-transform hover:-translate-y-1 md:p-8" data-testid="link-tiktok-profile">
+            <span>
+              <span className="mono block text-[8px] text-[#53605a]">TIKTOK / @ANCIENTREBORNWORLD</span>
+              <strong className="display mt-3 block text-[4.5rem] font-medium leading-none tracking-[-.08em]">44</strong>
+              <span className="mono mt-2 block text-[8px] text-[#53605a]">FOLLOWERS · CURRENT COUNT</span>
+            </span>
+            <ArrowUpRight size={24} className="text-[#b94c34] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCtNUD23kxh9qAOTobj4LdjQ?sub_confirmation=1" target="_blank" rel="noreferrer" className="group flex items-center justify-between rounded-[1.25rem] border border-[#1c302f]/25 bg-[#f5efdf] p-6 transition-transform hover:-translate-y-1 md:p-8" data-testid="link-youtube-channel">
+              <span className="flex items-center gap-4">
+                <img src="https://yt3.googleusercontent.com/Km7jjrB8OZTfRAHlO0BN_HRow9dRd8DKttVyHIVku18dgKjSBV0w2yDJRkXEO22vO_ZKVeFTsg=s160-c-k-c0x00ffffff-no-rj" alt="Ancient Reborn YouTube channel avatar" className="h-14 w-14 rounded-full object-cover" />
+                <span>
+                  <span className="mono block text-[8px] text-[#53605a]">YOUTUBE / @ANCIENTREBORNWORLD</span>
+                  <strong className="display mt-2 block text-[2.8rem] font-medium leading-none tracking-[-.08em]">17</strong>
+                  <span className="mono mt-2 block text-[8px] text-[#53605a]">SUBSCRIBERS · 57 VIDEOS</span>
+                </span>
+              </span>
+              <ArrowUpRight size={24} className="shrink-0 text-[#b94c34] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <footer className="mx-auto flex max-w-[1500px] flex-col gap-6 px-5 py-8 text-[9px] md:flex-row md:items-center md:justify-between md:px-12">
         <a href="#top" className="flex items-center gap-2 font-extrabold tracking-[.12em]" data-testid="link-footer-home"><Compass size={17} className="text-[#b94c34]" /> ANCIENT REBORN WORLD</a>
         <span className="mono text-[#7d796b]">WHEN THE SEA RINGS, THE LOST RETURN.</span>
