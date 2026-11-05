@@ -127,7 +127,7 @@ function Home() {
       <div className="marquee overflow-hidden border-y border-[#1c302f]/30 bg-[#e7c65e] py-3.5 text-[#1c302f]" aria-label="The Long Quiet. Namaris returns. The First Resonance.">
         <div className="marquee-track flex w-max items-center gap-8 whitespace-nowrap">
           {[0, 1].map((copy) => <div key={copy} className="flex items-center gap-8">
-            {['THE LONG QUIET', 'NAMARIS RETURNS', 'THE FIRST RESONANCE', 'A COMPASS TO NOWHERE', 'SOMEWHERE BELOW', '44 TIKTOK FOLLOWERS', '17 YOUTUBE SUBSCRIBERS'].map((item) => <span key={item} className="flex items-center gap-8"><span className="display text-[27px] font-semibold italic md:text-[34px]">{item}</span><span className="text-[#b94c34]"><Bell size={15} strokeWidth={1.5} /></span></span>)}
+            {['THE LONG QUIET', 'NAMARIS RETURNS', 'THE FIRST RESONANCE', 'A COMPASS TO NOWHERE', 'SOMEWHERE BELOW', '43 TIKTOK FOLLOWERS', '17 YOUTUBE SUBSCRIBERS'].map((item) => <span key={item} className="flex items-center gap-8"><span className="display text-[27px] font-semibold italic md:text-[34px]">{item}</span><span className="text-[#b94c34]"><Bell size={15} strokeWidth={1.5} /></span></span>)}
           </div>)}
         </div>
       </div>
@@ -314,8 +314,10 @@ function Home() {
             <a href="https://www.tiktok.com/@ancientrebornworld" target="_blank" rel="noreferrer" className="group flex items-center justify-between rounded-[1.25rem] border border-[#1c302f]/25 bg-[#f5efdf] p-6 transition-transform hover:-translate-y-1 md:p-8" data-testid="link-tiktok-profile">
             <span>
               <span className="mono block text-[8px] text-[#53605a]">TIKTOK / @ANCIENTREBORNWORLD</span>
-              <strong className="display mt-3 block text-[4.5rem] font-medium leading-none tracking-[-.08em]">44</strong>
+              <strong className="display mt-3 block text-[4.5rem] font-medium leading-none tracking-[-.08em]">43</strong>
               <span className="mono mt-2 block text-[8px] text-[#53605a]">FOLLOWERS · CURRENT COUNT</span>
+              <span className="mt-4 block text-[11px] leading-5 text-[#53605a]">Likes 43 · Following 0<br />Video views 136 · Profile views 0</span>
+              <span className="mono mt-3 block text-[7px] text-[#53605a]">LAST 7 DAYS · SNAPSHOT 04 NOV 2026</span>
             </span>
             <ArrowUpRight size={24} className="text-[#b94c34] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
