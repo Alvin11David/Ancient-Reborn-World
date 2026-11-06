@@ -1,5 +1,7 @@
 const profileUrl = "https://www.tiktok.com/@ancientrebornworld";
 const requestTimeoutMs = 10_000;
+const fallbackFollowers = 46;
+const fallbackFetchedAt = "2026-11-06T00:00:00.000Z";
 
 function extractFollowerCount(html: string): number | null {
   const patterns = [
@@ -56,12 +58,16 @@ export default async function handler() {
   } catch {
     return new Response(
       JSON.stringify({
-        error: "TikTok follower count is temporarily unavailable.",
+        followers: fallbackFollowers,
+        fetchedAt: fallbackFetchedAt,
+        source: "last-verified-tiktok-profile",
         stale: true,
       }),
       {
-        status: 503,
-        headers: { "Cache-Control": "no-store", "Content-Type": "application/json" },
+        headers: {
+          "Cache-Control": "no-store",
+          "Content-Type": "application/json",
+        },
       },
     );
   }

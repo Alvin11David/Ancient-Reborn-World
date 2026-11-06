@@ -154,7 +154,7 @@ export function TiktokLiveStats() {
   const { metrics, recentPosts, latestComment } = tiktokProfile;
   const [followers, setFollowers] = useState(tiktokProfile.totals.followers);
   const [lastSyncedAt, setLastSyncedAt] = useState<string | null>(null);
-  const [syncStatus, setSyncStatus] = useState<'loading' | 'synced' | 'unavailable'>('loading');
+  const [syncStatus, setSyncStatus] = useState<'loading' | 'synced' | 'stale'>('loading');
 
   useEffect(() => {
     const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? '';
@@ -176,11 +176,12 @@ export function TiktokLiveStats() {
         }
         if (active) {
           setFollowers(data.followers);
-          setLastSyncedAt('fetchedAt' in data && typeof data.fetchedAt === 'string' ? data.fetchedAt : null);
-          setSyncStatus('synced');
+          const fetchedAt = 'fetchedAt' in data && typeof data.fetchedAt === 'string' ? data.fetchedAt : null;
+          setLastSyncedAt(fetchedAt);
+          setSyncStatus('stale' in data && data.stale === true ? 'stale' : 'synced');
         }
       } catch {
-        if (active) setSyncStatus('unavailable');
+        if (active) setSyncStatus('stale');
       }
     };
 
@@ -223,7 +224,7 @@ export function TiktokLiveStats() {
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#e8cd72]" />
                 </span>
                 <span className="mono text-[8px] text-[#e8cd72]">
-                  {syncStatus === 'synced' ? 'Synced from TikTok' : syncStatus === 'loading' ? 'Syncing TikTok' : 'Sync unavailable'}
+                  {syncStatus === 'synced' ? 'Synced from TikTok' : syncStatus === 'loading' ? 'Syncing TikTok' : 'Latest available'}
                 </span>
               </span>
             </div>
