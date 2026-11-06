@@ -3,5 +3,6 @@
   "framework": "vite",
   "buildCommand": "pnpm --filter @workspace/ancient-reborn-world run build",
   "outputDirectory": "artifacts/ancient-reborn-world/dist/public",
+  "crons": [{ "path": "/api/tiktok/stats", "schedule": "*/15 * * * *" }],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

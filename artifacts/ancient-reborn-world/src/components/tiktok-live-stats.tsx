@@ -151,7 +151,48 @@ function PostCard({ post }: { post: (typeof tiktokProfile.recentPosts)[number] }
 
 export function TiktokLiveStats() {
   const { ref, inView } = useInView<HTMLDivElement>();
-  const { totals, metrics, recentPosts, latestComment } = tiktokProfile;
+  const { metrics, recentPosts, latestComment } = tiktokProfile;
+  const [followers, setFollowers] = useState(tiktokProfile.totals.followers);
+  const [lastSyncedAt, setLastSyncedAt] = useState<string | null>(null);
+  const [syncStatus, setSyncStatus] = useState<'loading' | 'synced' | 'unavailable'>('loading');
+
+  useEffect(() => {
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? '';
+    let active = true;
+
+    const syncFollowers = async () => {
+      try {
+        const response = await fetch(`${apiBaseUrl}/api/tiktok/stats`);
+        if (!response.ok) throw new Error(`Follower sync failed with status ${response.status}`);
+        const data: unknown = await response.json();
+        if (
+          !data ||
+          typeof data !== 'object' ||
+          !('followers' in data) ||
+          typeof data.followers !== 'number' ||
+          !Number.isSafeInteger(data.followers)
+        ) {
+          throw new Error('Follower sync returned an invalid response');
+        }
+        if (active) {
+          setFollowers(data.followers);
+          setLastSyncedAt('fetchedAt' in data && typeof data.fetchedAt === 'string' ? data.fetchedAt : null);
+          setSyncStatus('synced');
+        }
+      } catch {
+        if (active) setSyncStatus('unavailable');
+      }
+    };
+
+    void syncFollowers();
+    const interval = window.setInterval(syncFollowers, 15 * 60 * 1000);
+    return () => {
+      active = false;
+      window.clearInterval(interval);
+    };
+  }, []);
+
+  const totals = { ...tiktokProfile.totals, followers };
 
   return (
     <section id="community" className="relative overflow-hidden bg-[#e9e2d2] px-5 py-24 md:px-12 md:py-32">
@@ -164,7 +205,7 @@ export function TiktokLiveStats() {
             </h2>
           </div>
           <p className="max-w-[310px] pb-1 text-[13px] leading-6 text-[#53605a]">
-            The live pulse of the expedition on TikTok — every view, like and new pair of eyes following the map back to Namaris.
+            The latest snapshot of the expedition on TikTok — every view, like and new pair of eyes following the map back to Namaris.
           </p>
         </div>
 
@@ -181,7 +222,9 @@ export function TiktokLiveStats() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#e8cd72] opacity-70" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#e8cd72]" />
                 </span>
-                <span className="mono text-[8px] text-[#e8cd72]">Live sync</span>
+                <span className="mono text-[8px] text-[#e8cd72]">
+                  {syncStatus === 'synced' ? 'Synced from TikTok' : syncStatus === 'loading' ? 'Syncing TikTok' : 'Sync unavailable'}
+                </span>
               </span>
             </div>
 
@@ -212,7 +255,9 @@ export function TiktokLiveStats() {
             </div>
 
             <p className="mono relative mt-5 text-[7px] leading-4 text-[#f5efdf]/35">
-              Snapshot from TikTok Studio · {tiktokProfile.snapshotAt}
+              {lastSyncedAt
+                ? `Last checked ${new Date(lastSyncedAt).toLocaleString()}`
+                : `Fallback value · last verified ${tiktokProfile.snapshotAt}`}
             </p>
           </div>
 

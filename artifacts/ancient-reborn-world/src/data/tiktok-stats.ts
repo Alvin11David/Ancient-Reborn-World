@@ -34,12 +34,12 @@ export const tiktokProfile = {
   displayName: 'Ancient Reborn World',
   url: 'https://www.tiktok.com/@ancientrebornworld',
   bio: '🏛️ Bringing forgotten places back to life 🌿 Ancient ruins • AI restoration',
-  /** When these numbers were pulled from TikTok Studio. */
-  snapshotAt: '04 Nov 2026',
+  /** When these numbers were last verified against the TikTok profile. */
+  snapshotAt: '06 Nov 2026',
   windowLabel: 'Last 7 days',
   totals: {
     likes: 296,
-    followers: 43,
+    followers: 46,
     following: 0,
   },
   metrics: [
