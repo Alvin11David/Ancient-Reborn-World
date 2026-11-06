@@ -24,6 +24,19 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /tiktok/stats:
+    get:
+      operationId: getTiktokStats
+      tags: [community]
+      summary: Get the latest TikTok follower count
+      description: Returns a live follower count when available, or the last verified count as a stale fallback.
+      responses:
+        "200":
+          description: TikTok follower snapshot
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TiktokStatsResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +46,25 @@ components:
           type: string
       required:
         - status
+    TiktokStatsResponse:
+      type: object
+      properties:
+        followers:
+          type: integer
+          minimum: 0
+        fetchedAt:
+          type: string
+          format: date-time
+        source:
+          type: string
+          enum:
+            - tiktok-public-profile
+            - last-verified-tiktok-profile
+        stale:
+          type: boolean
+      required:
+        - followers
+        - fetchedAt
+        - source
+        - stale
 

@@ -1,0 +1,1 @@
+- [Bongo & Kiko scope](bongo-kiko-scope.md) — keep show additions inside its microsite routes; preserve original screens unless explicitly requested.
